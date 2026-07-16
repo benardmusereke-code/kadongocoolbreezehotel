@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kadongo Cool Breez Hotel Resort — Lakeside Luxury on Mfangano Island</title>
+    <meta name="description" content="Discover Kadongo Cool Breez Hotel Resort, a peaceful lakeside retreat on Mfangano Island, Lake Victoria. Authentic Kenyan hospitality, comfortable accommodation, and stunning sunsets just 100m from Sena Ferry Dock.">
+    <meta name="keywords" content="Kadongo Cool Breez Hotel, Mfangano Island hotel, Lake Victoria resort, Homa Bay accommodation, Sena Ferry hotel, Kenya lakeside lodge">
+    <meta property="og:title" content="Kadongo Cool Breez Hotel Resort — Lakeside Luxury on Mfangano Island">
+    <meta property="og:description" content="A peaceful lakeside retreat on Mfangano Island offering authentic Kenyan hospitality and unforgettable Lake Victoria sunsets.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kadongocoolbreez.com/">
+    <meta property="og:image" content="images/kadongologo.png">
+    <link rel="canonical" href="https://kadongocoolbreez.com/">
+    <link rel="icon" type="image/png" href="images/kadongologo.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Kadongo Cool Breez Hotel Resort",
+        "description": "A peaceful lakeside retreat on Mfangano Island offering authentic Kenyan hospitality, comfortable accommodation, and unforgettable natural beauty.",
+        "url": "https://kadongocoolbreez.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "P.O. Box 22-40319, 100m from Sena Ferry Dock",
+            "addressLocality": "Mfangano Island, Homa Bay County",
+            "addressCountry": "KE"
+        },
+        "telephone": ["+254756585016", "+254715249204"],
+        "email": "paulnyumbwe@gmail.com",
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Free Wi-Fi"},
+            {"@type": "LocationFeatureSpecification", "name": "24h Electricity"},
+            {"@type": "LocationFeatureSpecification", "name": "Room Service"},
+            {"@type": "LocationFeatureSpecification", "name": "Lake View"}
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <style>
+        /* ---- Homepage-specific styles ---- */
+        .hero-video { position: absolute; inset: 0; z-index: 0; }
+        .hero-video video { width: 100%; height: 100%; object-fit: cover; }
+
+        .home-experience { background: var(--bg-primary); }
+        .home-experience .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+            align-items: center;
+        }
+        .home-experience .img-collage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+        }
+        .home-experience .img-collage .img-main {
+            grid-column: 1 / -1;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            aspect-ratio: 16 / 10;
+        }
+        .home-experience .img-collage .img-side {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+        }
+        .home-experience .img-collage img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.8s var(--ease-luxury);
+        }
+        .home-experience .img-collage:hover img { transform: scale(1.04); }
+
+        .home-rooms { background: var(--bg-dark); }
+        .home-rooms .rooms-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto var(--space-16);
+        }
+        .home-rooms .rooms-header .section-eyebrow { justify-content: center; color: var(--brand-orange-light); }
+        .home-rooms .rooms-header .section-eyebrow::before { background: var(--brand-orange-light); }
+        .home-rooms .rooms-header .section-title { color: #fff; }
+        .home-rooms .rooms-header .section-lead { margin: 0 auto; color: var(--text-light-muted); }
+        .home-rooms .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-6);
+        }
+
+        .home-dining { background: var(--bg-warm); }
+        .home-dining .dining-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-8);
+        }
+        .dining-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            aspect-ratio: 16 / 10;
+        }
+        .dining-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease-luxury); }
+        .dining-item:hover img { transform: scale(1.05); }
+        .dining-item-content {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(20,30,51,0.85) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: var(--space-8);
+        }
+        .dining-item-icon { font-size: 28px; margin-bottom: var(--space-3); }
+        .dining-item-title { font-family: var(--serif); font-size: clamp(22px, 2vw, 30px); color: #fff; margin-bottom: var(--space-2); }
+        .dining-item-desc { font-size: var(--fs-small); color: rgba(253,248,243,0.6); max-width: 360px; }
+
+        .home-location { background: var(--bg-primary); }
+        .home-location .loc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-8);
+            margin-top: var(--space-12);
+        }
+        .loc-card {
+            text-align: center;
+            padding: var(--space-10) var(--space-8);
+            border-radius: var(--radius-md);
+            background: #fff;
+            border: var(--border-subtle);
+            transition: all var(--transition-base);
+        }
+        .loc-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-6px);
+            border-color: transparent;
+        }
+        .loc-card-icon {
+            width: 56px; height: 56px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto var(--space-6);
+            background: var(--brand-orange-soft);
+            border-radius: 50%;
+            font-size: 24px;
+            color: var(--brand-orange);
+        }
+        .loc-card h4 { margin-bottom: var(--space-3); }
+        .loc-card p { font-size: var(--fs-small); }
+
+        @media (max-width: 1024px) {
+            .home-experience .story-grid { grid-template-columns: 1fr; gap: var(--space-10); }
+            .home-rooms .rooms-grid { grid-template-columns: 1fr 1fr; }
+            .home-location .loc-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .home-rooms .rooms-grid { grid-template-columns: 1fr; }
+            .home-dining .dining-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Content -->
+    <div class="page-content">
+
+        <!-- Header -->
+        <header class="site-header" id="main-header">
+            <div class="header-inner">
+                <a href="index.html" class="nav-logo" aria-label="Kadongo Cool Breez Home">
+                    <img src="images/kadongologo.png" alt="Kadongo Cool Breez Hotel Resort" class="nav-logo-img">
+                </a>
+                <nav class="nav-desktop" aria-label="Main navigation">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="rooms.html" class="nav-link">Rooms</a>
+                    <a href="dining.html" class="nav-link">Dining</a>
+                    <a href="amenities.html" class="nav-link">Amenities</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="location.html" class="nav-link">Location</a>
+                    <a href="booking.html" class="btn-book-nav"><span>Book Now</span></a>
+                </nav>
+                <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Nav -->
+        <nav class="nav-mobile" aria-label="Mobile navigation">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="rooms.html" class="nav-link">Rooms</a>
+            <a href="dining.html" class="nav-link">Dining</a>
+            <a href="amenities.html" class="nav-link">Amenities</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="location.html" class="nav-link">Location</a>
+            <a href="booking.html" class="btn-book-nav"><span>Book Now</span></a>
+        </nav>
+
+        <!-- Hero -->
+        <section class="page-hero" id="hero">
+            <div class="page-hero-bg">
+                <video autoplay muted loop playsinline poster="images/longsteetview-with-shade.jpg">
+                    <source src="images/landing.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="page-hero-content">
+                <div class="hero-badge">Mfangano Island, Lake Victoria</div>
+                <h1 class="hero-title">
+                    <span class="line"><span class="line-inner">Where Comfort</span></span>
+                    <span class="line"><span class="line-inner">Meets the <em>Cool Breeze</em></span></span>
+                </h1>
+                <p class="hero-subtitle">A peaceful lakeside retreat on Mfangano Island offering authentic Kenyan hospitality, comfortable accommodation, and unforgettable natural beauty — just 100 metres from Sena Ferry Dock.</p>
+                <div class="hero-cta">
+                    <a href="booking.html" class="btn-primary"><span>Reserve Your Stay</span></a>
+                    <a href="rooms.html" class="btn-secondary"><span>Explore Rooms</span></a>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <span>Discover</span>
+                <div class="hero-scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="home-experience section-pad-lg">
+            <div class="container">
+                <div class="home-experience story-grid">
+                    <div class="img-collage reveal">
+                        <div class="img-main parallax-wrap">
+                            <img src="images/pathview2.png" alt="Scenic path leading to Lake Victoria" loading="lazy">
+                        </div>
+                        <div class="img-side parallax-wrap">
+                            <img src="images/terminus1619.png" alt="Sena Ferry terminal on Mfangano Island" loading="lazy">
+                        </div>
+                        <div class="img-side parallax-wrap">
+                            <img src="images/gatecloseview.png" alt="Entrance to Kadongo Cool Breez Hotel" loading="lazy">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="section-eyebrow">The Experience</div>
+                        <h2 class="section-title">An Island Retreat <em>Unlike Any Other</em></h2>
+                        <p class="section-lead">Nestled on the shores of Lake Victoria, Kadongo Cool Breez Hotel Resort offers a rare blend of natural beauty, cultural richness, and warm Kenyan hospitality.</p>
+                        <div style="margin-top: var(--space-10);">
+                            <div class="feature-grid reveal-stagger" style="grid-template-columns: 1fr 1fr;">
+                                <div class="feature-card">
+                                    <div class="feature-icon">⛴️</div>
+                                    <h4>100m from Ferry</h4>
+                                    <p>Steps from Sena Ferry Dock — the gateway to Mfangano Island.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">🌅</div>
+                                    <h4>Lake Victoria Views</h4>
+                                    <p>Breathtaking sunsets over Africa's largest lake.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">🌿</div>
+                                    <h4>Natural Surroundings</h4>
+                                    <p>Lush gardens and tranquil outdoor spaces.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">🤝</div>
+                                    <h4>Authentic Hospitality</h4>
+                                    <p>Genuine Kenyan warmth in every interaction.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rooms Preview -->
+        <section class="home-rooms section-pad-lg">
+            <div class="container">
+                <div class="rooms-header">
+                    <div class="section-eyebrow">Accommodation</div>
+                    <h2 class="section-title">Rooms Designed <em>for Comfort</em></h2>
+                    <p class="section-lead">Each room is a personal sanctuary — thoughtfully furnished, naturally lit, and oriented to capture the island's gentle breezes and lake views.</p>
+                </div>
+                <div class="rooms-grid reveal-stagger">
+                    <div class="room-card">
+                        <div class="room-card-img">
+                            <img src="images/singlestarndard3.png" alt="Standard Single Room at Kadongo Cool Breez" loading="lazy">
+                        </div>
+                        <div class="room-card-overlay">
+                            <div class="room-card-category">Standard</div>
+                            <div class="room-card-title">Single Room</div>
+                            <div class="room-card-price">From <strong>KES 1,500</strong> / night</div>
+                            <div class="room-card-link">View Details</div>
+                        </div>
+                    </div>
+                    <div class="room-card">
+                        <div class="room-card-img">
+                            <img src="images/doublebedroom.png" alt="Standard Double Room at Kadongo Cool Breez" loading="lazy">
+                        </div>
+                        <div class="room-card-overlay">
+                            <div class="room-card-category">Standard</div>
+                            <div class="room-card-title">Double Room</div>
+                            <div class="room-card-price">From <strong>KES 2,500</strong> / night</div>
+                            <div class="room-card-link">View Details</div>
+                        </div>
+                    </div>
+                    <div class="room-card">
+                        <div class="room-card-img">
+                            <img src="images/executivesingle.png" alt="Executive Suite at Kadongo Cool Breez" loading="lazy">
+                        </div>
+                        <div class="room-card-overlay">
+                            <div class="room-card-category">Executive</div>
+                            <div class="room-card-title">Executive Suite</div>
+                            <div class="room-card-price">From <strong>KES 2,500</strong> / night</div>
+                            <div class="room-card-link">View Details</div>
+                        </div>
+                    </div>
+                    <div class="room-card">
+                        <div class="room-card-img">
+                            <img src="images/deluxeroomwithbalcony.png" alt="Deluxe Room with balcony at Kadongo Cool Breez" loading="lazy">
+                        </div>
+                        <div class="room-card-overlay">
+                            <div class="room-card-category">Deluxe</div>
+                            <div class="room-card-title">Deluxe Room</div>
+                            <div class="room-card-price">From <strong>KES 3,000</strong> / night</div>
+                            <div class="room-card-link">View Details</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: var(--space-12);">
+                    <a href="rooms.html" class="btn-ghost"><span>View All Rooms &amp; Rates</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dining Preview -->
+        <section class="home-dining section-pad-lg">
+            <div class="container">
+                <div style="text-align: center; max-width: 640px; margin: 0 auto var(--space-16);">
+                    <div class="section-eyebrow" style="justify-content: center;">Dining</div>
+                    <h2 class="section-title">Taste of <em>Kenya</em></h2>
+                    <p class="section-lead" style="margin: 0 auto;">From hearty breakfasts to sunset dinners by the lake, our kitchen celebrates the rich flavours of authentic Kenyan cuisine.</p>
+                </div>
+                <div class="dining-grid reveal-stagger">
+                    <div class="dining-item">
+                        <img src="images/lunchdinner.png" alt="Lakeside dining experience at Kadongo" loading="lazy">
+                        <div class="dining-item-content">
+                            <div class="dining-item-icon">🍽️</div>
+                            <div class="dining-item-title">Lakeside Dining</div>
+                            <div class="dining-item-desc">Savour home-style meals while overlooking the calm waters of Lake Victoria.</div>
+                        </div>
+                    </div>
+                    <div class="dining-item">
+                        <img src="images/cocktailoutdoor.png" alt="Outdoor refreshments at Kadongo" loading="lazy">
+                        <div class="dining-item-content">
+                            <div class="dining-item-icon">🍹</div>
+                            <div class="dining-item-title">Refreshments &amp; Cocktails</div>
+                            <div class="dining-item-desc">Enjoy refreshing beverages in our beautiful outdoor settings.</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: var(--space-10);">
+                    <a href="dining.html" class="btn-ghost"><span>Explore Our Menu</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section class="home-location section-pad-lg">
+            <div class="container">
+                <div style="text-align: center; max-width: 640px; margin: 0 auto;">
+                    <div class="section-eyebrow" style="justify-content: center;">Location</div>
+                    <h2 class="section-title">Find <em>Your Way</em> to Paradise</h2>
+                    <p class="section-lead" style="margin: 0 auto;">Nestled on Mfangano Island in the Winam Gulf of Lake Victoria, Kadongo Cool Breez Hotel offers the perfect base for exploring this beautiful island destination.</p>
+                </div>
+                <div class="loc-grid reveal-stagger">
+                    <div class="loc-card">
+                        <div class="loc-card-icon">⛴️</div>
+                        <h4>100m from Sena Ferry</h4>
+                        <p>We are located just a short walk from the Sena Ferry Dock, making your arrival seamless and convenient.</p>
+                    </div>
+                    <div class="loc-card">
+                        <div class="loc-card-icon">🏘️</div>
+                        <h4>Near Sena Town</h4>
+                        <p>Explore the local community, cultural sites, and daily island life just moments from the hotel.</p>
+                    </div>
+                    <div class="loc-card">
+                        <div class="loc-card-icon">🗺️</div>
+                        <h4>Island Landmarks</h4>
+                        <p>Discover ancient rock art, historical shrines, and breathtaking viewpoints across Mfangano Island.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: var(--space-10);">
+                    <a href="location.html" class="btn-ghost"><span>View Location &amp; Directions</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container" style="position: relative; z-index: 1;">
+                <h2 class="cta-title">Begin Your <em>Island Escape</em></h2>
+                <p class="cta-text">Whether you're seeking a peaceful retreat, a cultural adventure, or simply time by the lake — your stay at Kadongo Cool Breez begins with a single conversation.</p>
+                <div class="cta-actions">
+                    <a href="booking.html" class="btn-primary"><span>Book Your Stay</span></a>
+                    <a href="tel:+254756585016" class="btn-secondary"><span>Call Us Now</span></a>
+                </div>
+                <div class="cta-contact">
+                    <div class="cta-contact-item">
+                        <span>📞</span>
+                        <span>+254 756 585 016</span>
+                    </div>
+                    <div class="cta-contact-item">
+                        <span>✉️</span>
+                        <span>paulnyumbwe@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="images/kadongologo.png" alt="Kadongo Cool Breez Hotel Resort" class="footer-logo-image">
+                        <p>Where Comfort Meets the Cool Breeze of Lake Victoria. A peaceful lakeside retreat on Mfangano Island offering authentic Kenyan hospitality, comfortable accommodation, and unforgettable natural beauty.</p>
+                        <div class="footer-social">
+                            <a href="https://web.facebook.com/profile.php?id=100007425518311" target="_blank" rel="noopener noreferrer" class="social-link social-link--facebook" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="https://wa.me/254756585016" target="_blank" rel="noopener noreferrer" class="social-link social-link--whatsapp" aria-label="WhatsApp">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=m8NyBI3VGc0" target="_blank" rel="noopener noreferrer" class="social-link social-link--youtube" aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="rooms.html">Rooms &amp; Suites</a></li>
+                            <li><a href="dining.html">Dining</a></li>
+                            <li><a href="amenities.html">Amenities</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Information</h4>
+                        <ul class="footer-links">
+                            <li><a href="location.html">Location</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="offers.html">Special Offers</a></li>
+                            <li><a href="cancellation.html">Cancellation Policy</a></li>
+                            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Contact</h4>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>P.O. Box 22–40319<br>Mfangano Island<br>Homa Bay County, Kenya</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+254 756 585 016<br>+254 715 249 204</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span>paulnyumbwe@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div>&copy; <span id="footer-year"></span> Kadongo Cool Breez Hotel Resort. All rights reserved.</div>
+                    <div>Mfangano Island, Kenya</div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Cookie Consent -->
+        <div class="cookie-consent" id="cookieConsent">
+            <div class="cookie-consent-text">
+                We use cookies to enhance your experience and analyse site traffic. By continuing to use our site, you consent to our use of cookies.
+                <a href="cookies.html">Learn more in our Cookie Policy</a>.
+            </div>
+            <div class="cookie-consent-actions">
+                <button class="cookie-btn cookie-btn-reject" onclick="Kadongo.rejectCookies()">Reject</button>
+                <button class="cookie-btn cookie-btn-learn" onclick="window.location.href='cookies.html'">Learn More</button>
+                <button class="cookie-btn cookie-btn-accept" onclick="Kadongo.acceptCookies()">Accept All</button>
+            </div>
+        </div>
+
+    </div><!-- /page-content -->
+
+    <script src="scripts/core.js"></script>
+</body>
+</html>

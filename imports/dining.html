@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining | Kadongo Cool Breez Hotel Resort — Authentic Kenyan Cuisine</title>
+    <meta name="description" content="Savor authentic Kenyan home-style cuisine at Kadongo Cool Breez Hotel Resort. Enjoy fresh lake fish, traditional ugali, and scenic lakeside dining on Mfangano Island.">
+    <meta name="keywords" content="Kadongo Cool Breez dining, Mfangano Island restaurant, Kenyan cuisine Lake Victoria, Sena Ferry food, lakeside dining Homa Bay">
+    <meta property="og:title" content="Dining | Kadongo Cool Breez Hotel Resort — Authentic Kenyan Cuisine">
+    <meta property="og:description" content="Authentic Kenyan home-style cuisine served with the cool breeze of Lake Victoria.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kadongocoolbreez.com/dining.html">
+    <meta property="og:image" content="images/kadongologo.png">
+    <link rel="canonical" href="https://kadongocoolbreez.com/dining.html">
+    <link rel="icon" type="image/png" href="images/kadongologo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <style>
+        .dining-philosophy { background: var(--bg-primary); }
+        .dining-philosophy .story-block { gap: var(--space-16); }
+        .dining-philosophy .story-text p { margin-bottom: var(--space-6); }
+
+        .dining-menu { background: var(--bg-secondary); }
+        .dining-menu .menu-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto var(--space-16);
+        }
+        .dining-menu .menu-header .section-eyebrow { justify-content: center; }
+        .dining-menu .menu-header .section-lead { margin: 0 auto; }
+        .dining-menu .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-8);
+        }
+
+        .dining-atmosphere { background: var(--bg-primary); }
+        .dining-atmosphere .story-block { gap: var(--space-16); }
+        .dining-atmosphere .story-text p { margin-bottom: var(--space-6); }
+
+        .dining-features { background: var(--bg-primary); padding-top: 0; }
+        .dining-features .feature-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .dining-gallery { background: var(--bg-warm); }
+        .dining-gallery .gallery-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto var(--space-12);
+        }
+        .dining-gallery .gallery-header .section-eyebrow { justify-content: center; }
+        .dining-gallery .gallery-header .section-lead { margin: 0 auto; }
+        .dining-gallery .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-6);
+        }
+        .dining-gallery .gallery-item { aspect-ratio: 16 / 10; }
+
+        @media (max-width: 1024px) {
+            .dining-menu .menu-grid { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
+            .dining-features .feature-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .dining-features .feature-grid { grid-template-columns: 1fr; }
+            .dining-gallery .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Content -->
+    <div class="page-content">
+
+        <!-- Header -->
+        <header class="site-header" id="main-header">
+            <div class="header-inner">
+                <a href="index.html" class="nav-logo" aria-label="Kadongo Cool Breez Home">
+                    <img src="images/kadongologo.png" alt="Kadongo Cool Breez Hotel Resort" class="nav-logo-img">
+                </a>
+                <nav class="nav-desktop" aria-label="Main navigation">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="rooms.html" class="nav-link">Rooms</a>
+                    <a href="dining.html" class="nav-link active">Dining</a>
+                    <a href="amenities.html" class="nav-link">Amenities</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="location.html" class="nav-link">Location</a>
+                    <a href="booking.html" class="btn-book-nav"><span>Book Now</span></a>
+                </nav>
+                <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Nav -->
+        <nav class="nav-mobile" aria-label="Mobile navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="rooms.html" class="nav-link">Rooms</a>
+            <a href="dining.html" class="nav-link active">Dining</a>
+            <a href="amenities.html" class="nav-link">Amenities</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="location.html" class="nav-link">Location</a>
+            <a href="booking.html" class="btn-book-nav"><span>Book Now</span></a>
+        </nav>
+
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--inner" id="hero">
+            <div class="page-hero-bg">
+                <img src="images/cuisine.png" alt="Dining at Kadongo Cool Breez Hotel Resort" loading="eager">
+            </div>
+            <div class="page-hero-content">
+                <div class="hero-badge">Lakeside Dining &bull; Mfangano Island</div>
+                <h1 class="hero-title">
+                    <span class="line"><span class="line-inner">A Taste of Home,</span></span>
+                    <span class="line"><span class="line-inner">Served by the <em>Lake</em></span></span>
+                </h1>
+                <p class="hero-subtitle">Savor authentic Kenyan home-style cuisine prepared with fresh, local ingredients. From traditional ugali and fresh lake fish to refreshing sundowners, every meal is a celebration of Mfangano Island.</p>
+            </div>
+        </section>
+
+        <!-- Dining Philosophy -->
+        <section class="dining-philosophy section-pad-lg">
+            <div class="container">
+                <div class="story-block">
+                    <div class="story-visual reveal">
+                        <img src="images/restodine.png" alt="Authentic Kenyan home-style cuisine at Kadongo Cool Breez Hotel" loading="lazy">
+                    </div>
+                    <div class="story-text">
+                        <div class="section-eyebrow reveal">Our Kitchen</div>
+                        <h2 class="section-title reveal">Authentic <em>Kenyan Cuisine</em></h2>
+                        <p class="section-lead reveal">At Kadongo Cool Breez Hotel Resort, dining is more than just a meal — it is an experience of warmth, heritage, and genuine hospitality.</p>
+                        <p class="reveal">Our experienced kitchen team prepares delicious home-style meals using fresh, locally sourced ingredients. Whether you are enjoying a hearty breakfast before exploring the island, or sharing a lakeside dinner as the sun sets over Lake Victoria, our menu captures the true taste of Kenya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Categories -->
+        <section class="dining-menu section-pad-lg">
+            <div class="container">
+                <div class="menu-header">
+                    <div class="section-eyebrow reveal">Our Menu</div>
+                    <h2 class="section-title reveal">Crafted with <em>Care</em></h2>
+                    <p class="section-lead reveal">A selection of our daily offerings. We proudly serve traditional favorites alongside refreshing beverages to complete your dining experience.</p>
+                </div>
+                <div class="menu-grid reveal-stagger">
+                    <!-- Breakfast -->
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="images/breakfast.png" alt="Traditional Kenyan breakfast" loading="lazy">
+                        </div>
+                        <div class="menu-card-content">
+                            <span class="material-icons">free_breakfast</span>
+                            <h3>Breakfast</h3>
+                            <ul class="menu-list">
+                                <li>Black Tea</li>
+                                <li>Fresh Milk</li>
+                                <li>Toasted Bread &amp; Mandazi</li>
+                                <li>Cassava &amp; Nduma</li>
+                                <li>Groundnuts &amp; Sausages</li>
+                                <li>Drinking Water</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Lunch & Dinner -->
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="images/kenyanlunchdinner.png" alt="Hearty Kenyan lunch and dinner" loading="lazy">
+                        </div>
+                        <div class="menu-card-content">
+                            <span class="material-icons">restaurant</span>
+                            <h3>Lunch &amp; Dinner</h3>
+                            <ul class="menu-list">
+                                <li>White &amp; Brown Ugali</li>
+                                <li>Chapati &amp; Rice</li>
+                                <li>Fresh Fish</li>
+                                <li>Chicken &amp; Beef</li>
+                                <li>Mboga Kienyeji</li>
+                                <li>Fresh Fruits &amp; Water</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Drinks & Refreshments -->
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="images/cocktaildrink.png" alt="Refreshing drinks and cocktails" loading="lazy">
+                        </div>
+                        <div class="menu-card-content">
+                            <span class="material-icons">local_bar</span>
+                            <h3>Drinks &amp; Refreshments</h3>
+                            <ul class="menu-list">
+                                <li>Soft Drinks</li>
+                                <li>Local Drinks &amp; Beers</li>
+                                <li>Artisan Beers &amp; Wines</li>
+                                <li>Cocktails</li>
+                                <li>Hot Beverages</li>
+                                <li>Mineral Water</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lakeside Dining Experience -->
+        <section class="dining-atmosphere section-pad-lg">
+            <div class="container">
+                <div class="story-block reverse">
+                    <div class="story-visual reveal">
+                        <img src="images/lunchdinner.png" alt="Lakeside dining with sunset views at Kadongo" loading="lazy">
+                    </div>
+                    <div class="story-text">
+                        <div class="section-eyebrow reveal">The Atmosphere</div>
+                        <h2 class="section-title reveal">Dining by the <em>Lakeshore</em></h2>
+                        <p class="section-lead reveal">Enjoy your meals while overlooking the calm waters of Lake Victoria. Our beautiful outdoor dining spaces offer a peaceful atmosphere, fresh lake breezes, and scenic sunsets that make every evening memorable.</p>
+                        <p class="reveal">Whether you are relaxing in our beautifully designed gazebos, working remotely with free Wi-Fi, or simply enjoying a quiet drink as the day ends, our outdoor spaces provide the perfect setting for relaxation and connection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dining Features -->
+        <section class="dining-features section-pad-lg">
+            <div class="container">
+                <div class="feature-grid reveal-stagger">
+                    <div class="feature-card">
+                        <div class="feature-icon"><span class="material-icons">wb_sunny</span></div>
+                        <h4>Scenic Sunset Views</h4>
+                        <p>Watch the sun dip below Lake Victoria while you dine.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><span class="material-icons">deck</span></div>
+                        <h4>Lakeside Gazebos</h4>
+                        <p>Dine in beautifully designed outdoor gazebos by the shore.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><span class="material-icons">wifi</span></div>
+                        <h4>Free Wi-Fi</h4>
+                        <p>Stay connected in our gazebos and outdoor spaces.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><span class="material-icons">local_bar</span></div>
+                        <h4>Refreshing Beverages</h4>
+                        <p>Enjoy cocktails, local beers, and hot drinks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Preview -->
+        <section class="dining-gallery section-pad-lg">
+            <div class="container">
+                <div class="gallery-header">
+                    <div class="section-eyebrow reveal">Gallery</div>
+                    <h2 class="section-title reveal">Dining <em>Moments</em></h2>
+                    <p class="section-lead reveal">A glimpse of the culinary experiences and beautiful settings that await you at Kadongo Cool Breez.</p>
+                </div>
+                <div class="gallery-grid reveal-stagger">
+                    <div class="gallery-item">
+                        <img src="images/cocktailoutdoor.png" alt="Outdoor cocktails at Kadongo Cool Breez" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-category">Refreshments</div>
+                            <div class="gallery-title">Outdoor Cocktails</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/fish.png" alt="Fresh lake fish served at Kadongo" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-category">Cuisine</div>
+                            <div class="gallery-title">Fresh Lake Fish</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/choma.png" alt="Kenyan choma at Kadongo Cool Breez" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-category">Cuisine</div>
+                            <div class="gallery-title">Kenyan Choma</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/outdoortableset2.png" alt="Lakeside table setting at Kadongo" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-category">Atmosphere</div>
+                            <div class="gallery-title">Lakeside Dining</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container" style="position: relative; z-index: 1;">
+                <h2 class="cta-title">Ready to <em>Savor Paradise</em>?</h2>
+                <p class="cta-text">Whether you are staying with us or visiting for a meal, we would love to welcome you. Call us to inquire about our daily menu or reserve a table.</p>
+                <div class="cta-actions">
+                    <a href="booking.html" class="btn-primary"><span>Book Your Stay</span></a>
+                    <a href="tel:+254756585016" class="btn-secondary"><span>Call Us Now</span></a>
+                </div>
+                <div class="cta-contact">
+                    <div class="cta-contact-item">
+                        <span>📞</span>
+                        <span>+254 756 585 016</span>
+                    </div>
+                    <div class="cta-contact-item">
+                        <span>✉️</span>
+                        <span>paulnyumbwe@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="images/kadongologo.png" alt="Kadongo Cool Breez Hotel Resort" class="footer-logo-image">
+                        <p>Where Comfort Meets the Cool Breeze of Lake Victoria. A peaceful lakeside retreat on Mfangano Island offering authentic Kenyan hospitality, comfortable accommodation, and unforgettable natural beauty.</p>
+                        <div class="footer-social">
+                            <a href="https://web.facebook.com/profile.php?id=100007425518311" target="_blank" rel="noopener noreferrer" class="social-link social-link--facebook" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="https://wa.me/254756585016" target="_blank" rel="noopener noreferrer" class="social-link social-link--whatsapp" aria-label="WhatsApp">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=m8NyBI3VGc0" target="_blank" rel="noopener noreferrer" class="social-link social-link--youtube" aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="rooms.html">Rooms &amp; Suites</a></li>
+                            <li><a href="dining.html">Dining</a></li>
+                            <li><a href="amenities.html">Amenities</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Information</h4>
+                        <ul class="footer-links">
+                            <li><a href="location.html">Location</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="offers.html">Special Offers</a></li>
+                            <li><a href="cancellation.html">Cancellation Policy</a></li>
+                            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Contact</h4>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>P.O. Box 22–40319<br>Mfangano Island<br>Homa Bay County, Kenya</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+254 756 585 016<br>+254 715 249 204</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span>paulnyumbwe@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div>&copy; <span id="footer-year"></span> Kadongo Cool Breez Hotel Resort. All rights reserved.</div>
+                    <div>Mfangano Island, Kenya</div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Cookie Consent -->
+        <div class="cookie-consent" id="cookieConsent">
+            <div class="cookie-consent-text">
+                We use cookies to enhance your experience and analyse site traffic. By continuing to use our site, you consent to our use of cookies.
+                <a href="cookies.html">Learn more in our Cookie Policy</a>.
+            </div>
+            <div class="cookie-consent-actions">
+                <button class="cookie-btn cookie-btn-reject" onclick="Kadongo.rejectCookies()">Reject</button>
+                <button class="cookie-btn cookie-btn-learn" onclick="window.location.href='cookies.html'">Learn More</button>
+                <button class="cookie-btn cookie-btn-accept" onclick="Kadongo.acceptCookies()">Accept All</button>
+            </div>
+        </div>
+
+    </div><!-- /page-content -->
+
+    <script src="scripts/core.js"></script>
+</body>
+</html>

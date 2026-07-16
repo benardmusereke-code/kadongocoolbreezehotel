@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancellation Policy — Kadongo Cool Breez Hotel Resort</title>
+    <meta name="description" content="Cancellation and modification policy for Kadongo Cool Breez Hotel Resort. Fair guidelines for changing or cancelling your telephone reservation on Mfangano Island.">
+    <meta name="keywords" content="Kadongo Cool Breez cancellation policy, Mfangano Island hotel cancellation, booking modification, Homa Bay hotel policy, Lake Victoria resort">
+    <meta property="og:title" content="Cancellation Policy — Kadongo Cool Breez Hotel Resort">
+    <meta property="og:description" content="Fair and transparent guidelines for modifying or cancelling your reservation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kadongocoolbreez.com/cancellation.html">
+    <meta property="og:image" content="images/kadongologo.png">
+    <link rel="canonical" href="https://kadongocoolbreez.com/cancellation.html">
+    <link rel="icon" type="image/png" href="images/kadongologo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <style>
+        /* ---- Cancellation Policy page styles ---- */
+        .policy-document { background: var(--bg-primary); padding: var(--space-16) 0 var(--space-20); }
+        .policy-document .container { max-width: 900px; }
+
+        .doc-header {
+            text-align: center;
+            padding-bottom: var(--space-10);
+            border-bottom: 2px solid var(--brand-navy);
+            margin-bottom: var(--space-12);
+        }
+        .doc-logo {
+            font-family: var(--serif);
+            font-size: clamp(28px, 3vw, 36px);
+            font-weight: 700;
+            color: var(--brand-orange);
+            letter-spacing: 4px;
+            margin-bottom: var(--space-2);
+        }
+        .doc-logo-sub {
+            font-family: var(--sans);
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--brand-orange-light);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: var(--space-8);
+        }
+        .doc-title {
+            font-family: var(--serif);
+            font-size: clamp(26px, 3vw, 34px);
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+            letter-spacing: 0.5px;
+        }
+        .doc-meta {
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+        .doc-meta strong { color: var(--text-primary); font-weight: 500; }
+
+        /* Table of contents */
+        .toc {
+            background: var(--bg-secondary);
+            padding: var(--space-8) var(--space-10);
+            border-left: 4px solid var(--brand-orange-light);
+            margin-bottom: var(--space-12);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+        .toc-title {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: var(--space-5);
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            columns: 2;
+            column-gap: var(--space-8);
+        }
+        .toc-list li {
+            margin-bottom: var(--space-3);
+            break-inside: avoid;
+        }
+        .toc-list a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: baseline;
+            gap: var(--space-3);
+            transition: color 0.3s;
+            padding: var(--space-1) 0;
+        }
+        .toc-list a:hover { color: var(--brand-orange); }
+        .toc-num {
+            font-family: var(--serif);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--brand-orange-light);
+            min-width: 24px;
+        }
+
+        /* Legal sections */
+        .legal-section {
+            margin-bottom: var(--space-12);
+            scroll-margin-top: 100px;
+        }
+        .legal-section:last-child { margin-bottom: 0; }
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            gap: var(--space-5);
+            margin-bottom: var(--space-6);
+            padding-bottom: var(--space-4);
+            border-bottom: 1px solid rgba(27, 40, 69, 0.1);
+        }
+        .section-number {
+            font-family: var(--serif);
+            font-size: clamp(36px, 4vw, 48px);
+            font-weight: 600;
+            color: var(--brand-orange-light);
+            line-height: 1;
+            min-width: 52px;
+        }
+        .legal-section .section-title {
+            font-family: var(--serif);
+            font-size: clamp(22px, 2vw, 28px);
+            font-weight: 500;
+            color: var(--text-primary);
+            letter-spacing: 0.5px;
+        }
+        .legal-section p {
+            font-size: 15px;
+            line-height: 1.85;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-4);
+        }
+        .legal-section p:last-child { margin-bottom: 0; }
+        .legal-section strong { color: var(--text-primary); font-weight: 600; }
+        .legal-section ul, .legal-section ol {
+            margin: var(--space-4) 0 var(--space-5) var(--space-6);
+            color: var(--text-secondary);
+        }
+        .legal-section li {
+            font-size: 15px;
+            line-height: 1.75;
+            margin-bottom: var(--space-3);
+            padding-left: var(--space-2);
+        }
+        .legal-section li::marker { color: var(--brand-orange-light); font-weight: 600; }
+
+        /* Sub-sections */
+        .sub-section {
+            margin-top: var(--space-7);
+            padding-left: var(--space-6);
+            border-left: 2px solid var(--brand-orange-light);
+        }
+        .sub-section h4 {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: var(--space-3);
+            margin-top: 0;
+        }
+
+        /* Notice & info boxes */
+        .notice-box {
+            background: rgba(232, 101, 10, 0.04);
+            border-left: 4px solid var(--brand-orange);
+            padding: var(--space-6) var(--space-7);
+            margin: var(--space-7) 0;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+        .notice-title {
+            font-family: var(--serif);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--brand-orange);
+            margin-bottom: var(--space-2);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        .notice-title .material-icons { font-size: 22px; }
+        .notice-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.7;
+        }
+        .info-box {
+            background: rgba(27, 40, 69, 0.04);
+            border-left: 4px solid var(--brand-navy);
+            padding: var(--space-6) var(--space-7);
+            margin: var(--space-7) 0;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+        .info-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* Timeline table */
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-6) 0;
+            font-size: 14px;
+        }
+        .timeline-table th {
+            background: var(--brand-navy);
+            color: var(--brand-cream);
+            padding: var(--space-4) var(--space-5);
+            text-align: left;
+            font-family: var(--sans);
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .timeline-table th:first-child { border-top-left-radius: var(--radius-sm); }
+        .timeline-table th:last-child { border-top-right-radius: var(--radius-sm); }
+        .timeline-table td {
+            padding: var(--space-4) var(--space-5);
+            border-bottom: 1px solid rgba(27, 40, 69, 0.08);
+            color: var(--text-secondary);
+        }
+        .timeline-table tr:last-child td { border-bottom: none; }
+        .timeline-table tr:nth-child(even) td { background: rgba(253, 248, 243, 0.5); }
+        .refund-amount {
+            font-family: var(--serif);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .refund-full { color: #27ae60; }
+        .refund-partial { color: var(--brand-orange-light); }
+        .refund-none { color: var(--brand-orange); }
+
+        /* Contact card */
+        .contact-card {
+            background: var(--bg-secondary);
+            padding: var(--space-8) var(--space-10);
+            border: var(--border-subtle);
+            border-radius: var(--radius-md);
+            margin-top: var(--space-10);
+        }
+        .contact-card h4 {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: var(--space-5);
+            text-align: center;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+            text-align: center;
+        }
+        .contact-item .material-icons {
+            font-size: 28px;
+            color: var(--brand-orange-light);
+            margin-bottom: var(--space-2);
+        }
+        .contact-item .label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: var(--space-1);
+        }
+        .contact-item .value {
+            font-family: var(--serif);
+            font-size: 16px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        .contact-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-item a:hover { color: var(--brand-orange); }
+        .contact-card .contact-address {
+            text-align: center;
+            margin-top: var(--space-5);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Print actions */
+        .print-actions {
+            position: fixed;
+            bottom: var(--space-8);
+            right: var(--space-8);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+            z-index: 100;
+        }
+        .print-btn {
+            width: 56px;
+            height: 56px;
+            background: var(--brand-navy);
+            color: var(--brand-cream);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s var(--ease-luxury);
+            position: relative;
+        }
+        .print-btn:hover {
+            background: var(--brand-orange-light);
+            color: var(--brand-navy);
+            transform: translateY(-4px);
+        }
+        .print-btn .material-icons { font-size: 24px; }
+        .print-btn .tooltip {
+            position: absolute;
+            right: 70px;
+            background: var(--brand-navy);
+            color: var(--brand-cream);
+            padding: var(--space-2) var(--space-4);
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: var(--radius-sm);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s;
+            pointer-events: none;
+        }
+        .print-btn:hover .tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @media (max-width: 900px) {
+            .toc { padding: var(--space-6); }
+            .contact-card { padding: var(--space-6); }
+        }
+        @media (max-width: 700px) {
+            .toc-list { columns: 1; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .print-actions { bottom: var(--space-5); right: var(--space-5); }
+            .print-btn { width: 48px; height: 48px; }
+            .print-btn .tooltip { display: none; }
+        }
+
+        /* Print styles */
+        @media print {
+            @page { size: A4; margin: 2cm 2cm 2.5cm 2cm; }
+            .print-actions, footer, .cookie-consent, .site-header, .nav-mobile, .page-hero { display: none !important; }
+            .policy-document { padding: 0; }
+            .legal-section { page-break-inside: avoid; }
+            .notice-box, .info-box, .contact-card, .toc, .timeline-table { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Content -->
+    <div class="page-content">
+
+        <!-- Header -->
+        <header class="site-header" id="main-header">
+            <div class="header-inner">
+                <a href="index.html" class="nav-logo" aria-label="Kadongo Cool Breez Home">
+                    <img src="images/kadongologo.png" alt="Kadongo Cool Breez Hotel Resort" class="nav-logo-img">
+                </a>
+                <nav class="nav-desktop" aria-label="Main navigation">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="rooms.html" class="nav-link">Rooms</a>
+                    <a href="dining.html" class="nav-link">Dining</a>
+                    <a href="amenities.html" class="nav-link">Amenities</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="location.html" class="nav-link">Location</a>
+                    <a href="booking.html" class="btn-book-nav"><span>Book Now</span></a>
+                </nav>
+                <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Nav -->
+        <nav class="nav-mobile" aria-label="Mobile navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="rooms.html" class="nav-link">Rooms</a>
+            <a href="dining.html" class="nav-link">Dining</a>
+            <a href="amenities.html" class="nav-link">Amenities</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="location.html" class="nav-link">Location</a>
+            <a href="booking.html" class="btn-book-nav"><span>Book Now</span></a>
+        </nav>
+
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--inner" id="hero">
+            <div class="page-hero-bg">
+                <img src="images/bedroom1.png" alt="Kadongo Cool Breez Hotel Resort, Mfangano Island" loading="eager">
+            </div>
+            <div class="page-hero-content">
+                <div class="hero-badge">Policy &bull; Mfangano Island</div>
+                <h1 class="hero-title">
+                    <span class="line"><span class="line-inner">Cancellation</span></span>
+                    <span class="line"><span class="line-inner"><em>Policy</em></span></span>
+                </h1>
+                <p class="hero-subtitle">Fair and transparent guidelines for modifying or cancelling your telephone reservation at Kadongo Cool Breez Hotel Resort.</p>
+            </div>
+            <div class="hero-scroll">
+                <span>Discover</span>
+                <div class="hero-scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Policy Document -->
+        <section class="policy-document">
+            <div class="container">
+
+                <!-- Document Header -->
+                <div class="doc-header reveal">
+                    <div class="doc-logo">KADONGO</div>
+                    <div class="doc-logo-sub">Cool Breez Hotel Resort</div>
+                    <h2 class="doc-title">Cancellation &amp; Modification Policy</h2>
+                    <p class="doc-meta">
+                        <strong>Last Updated:</strong> January 2026 &nbsp;&bull;&nbsp;
+                        <strong>Version:</strong> 1.0 &nbsp;&bull;&nbsp;
+                        <strong>Effective:</strong> Immediately upon booking
+                    </p>
+                </div>
+
+                <!-- Table of Contents -->
+                <nav class="toc reveal" aria-label="Table of Contents">
+                    <h3 class="toc-title">Contents</h3>
+                    <ol class="toc-list">
+                        <li><a href="#introduction"><span class="toc-num">01</span> Introduction &amp; Scope</a></li>
+                        <li><a href="#how-to-cancel"><span class="toc-num">02</span> How to Cancel Your Reservation</a></li>
+                        <li><a href="#timeline"><span class="toc-num">03</span> Cancellation Timeline &amp; Fees</a></li>
+                        <li><a href="#modifications"><span class="toc-num">04</span> Modifying Your Stay</a></li>
+                        <li><a href="#no-show"><span class="toc-num">05</span> No-Show Policy</a></li>
+                        <li><a href="#exceptions"><span class="toc-num">06</span> Exceptions &amp; Force Majeure</a></li>
+                        <li><a href="#refunds"><span class="toc-num">07</span> Refund Processing</a></li>
+                        <li><a href="#contact-cancel"><span class="toc-num">08</span> Contact Us</a></li>
+                    </ol>
+                </nav>
+
+                <!-- Section 1: Introduction -->
+                <section class="legal-section reveal" id="introduction">
+                    <div class="section-header">
+                        <span class="section-number">01</span>
+                        <h3 class="section-title">Introduction &amp; Scope</h3>
+                    </div>
+                    <p>
+                        At Kadongo Cool Breez Hotel Resort, we understand that travel plans can change.
+                        Because our remote island location on Mfangano requires careful preparation for
+                        every guest's arrival, we have established this policy to balance flexibility for
+                        our guests with the operational realities of our small, family-run property.
+                    </p>
+                    <p>
+                        This policy applies to all reservations made directly with our management team
+                        by telephone. By confirming your booking, you agree to these cancellation terms.
+                    </p>
+                    <div class="info-box">
+                        <p>
+                            <strong>Our Promise:</strong> We strive to be as accommodating as possible.
+                            If your plans change, please communicate with us as early as you can so we
+                            can assist you in the best way possible.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 2: How to Cancel -->
+                <section class="legal-section reveal" id="how-to-cancel">
+                    <div class="section-header">
+                        <span class="section-number">02</span>
+                        <h3 class="section-title">How to Cancel Your Reservation</h3>
+                    </div>
+                    <p>
+                        Since all reservations at Kadongo Cool Breez Hotel Resort are handled directly
+                        by our management team via telephone, <strong>all cancellations must also be made by telephone</strong>
+                        to ensure immediate confirmation and proper processing.
+                    </p>
+                    <ul>
+                        <li><strong>Primary Line:</strong> +254 756 585 016</li>
+                        <li><strong>Alternative Line:</strong> +254 715 249 204</li>
+                    </ul>
+                    <p>
+                        You may follow up with an email to <strong>paulnyumbwe@gmail.com</strong> for your
+                        personal records, but the cancellation is only considered official once verbally
+                        confirmed by our management team.
+                    </p>
+                    <div class="notice-box">
+                        <div class="notice-title">
+                            <span class="material-icons">warning</span>
+                            Important Notice
+                        </div>
+                        <p>
+                            Email-only cancellation requests may not be processed in time to avoid late
+                            cancellation fees. Please always call us directly to cancel your booking.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 3: Timeline -->
+                <section class="legal-section reveal" id="timeline">
+                    <div class="section-header">
+                        <span class="section-number">03</span>
+                        <h3 class="section-title">Cancellation Timeline &amp; Fees</h3>
+                    </div>
+                    <p>
+                        Refund eligibility is determined by the amount of notice provided before your
+                        scheduled check-in date. The following timeline applies to all standard reservations:
+                    </p>
+
+                    <table class="timeline-table">
+                        <thead>
+                            <tr>
+                                <th>Notice Period</th>
+                                <th>Refund Amount</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>7 days or more</strong> before check-in</td>
+                                <td><span class="refund-amount refund-full">100% Refund</span></td>
+                                <td>Full refund of any deposit or payment made.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3 to 6 days</strong> before check-in</td>
+                                <td><span class="refund-amount refund-partial">50% Refund</span></td>
+                                <td>50% refund of the first night's rate.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Less than 3 days</strong> before check-in</td>
+                                <td><span class="refund-amount refund-none">No Refund</span></td>
+                                <td>100% of the first night's rate is retained.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="sub-section">
+                        <h4>Peak Season Notice</h4>
+                        <p>
+                            During our peak seasons (December–March and June–October), we kindly request
+                            <strong>14 days' notice</strong> for a full refund due to high demand and limited
+                            room availability on the island.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 4: Modifications -->
+                <section class="legal-section reveal" id="modifications">
+                    <div class="section-header">
+                        <span class="section-number">04</span>
+                        <h3 class="section-title">Modifying Your Stay</h3>
+                    </div>
+                    <p>
+                        We are happy to help you change your travel dates or room type if your plans shift.
+                        All modifications must be requested by telephone and are subject to the following conditions:
+                    </p>
+                    <ul>
+                        <li><strong>Date Changes:</strong> Subject to room availability on your new dates. Any rate differences will be applied.</li>
+                        <li><strong>Room Changes:</strong> Upgrades are subject to availability. Downgrades may be treated as a partial cancellation under our standard timeline.</li>
+                        <li><strong>Guest Count:</strong> Adding guests may require a rate adjustment. Reducing guest count follows the standard cancellation policy for the removed portion.</li>
+                    </ul>
+                    <p>
+                        Modifications requested within 3 days of your original arrival date may be treated
+                        as a cancellation and a new booking under our standard policy.
+                    </p>
+                </section>
+
+                <!-- Section 5: No-Show -->
+                <section class="legal-section reveal" id="no-show">
+                    <div class="section-header">
+                        <span class="section-number">05</span>
+                        <h3 class="section-title">No-Show Policy</h3>
+                    </div>
+                    <p>
+                        If you do not arrive on your scheduled check-in date and have not contacted us to
+                        cancel or modify your reservation, the booking is considered a "No-Show."
+                    </p>
+                    <ul>
+                        <li>The full first night's rate will be charged and is non-refundable.</li>
+                        <li>All remaining nights in the reservation will be automatically cancelled.</li>
+                        <li>Future bookings may require full prepayment at the time of reservation.</li>
+                    </ul>
+                    <div class="info-box">
+                        <p>
+                            <strong>Travel Delays:</strong> If you are delayed due to ferry schedules, weather,
+                            or transport issues, please call us as soon as possible. We may be able to hold
+                            your room or adjust your dates on a case-by-case basis.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 6: Exceptions -->
+                <section class="legal-section reveal" id="exceptions">
+                    <div class="section-header">
+                        <span class="section-number">06</span>
+                        <h3 class="section-title">Exceptions &amp; Force Majeure</h3>
+                    </div>
+                    <p>
+                        We recognise that travelling to Mfangano Island involves ferry crossings and can be
+                        affected by circumstances beyond anyone's control. We may waive standard cancellation
+                        fees in exceptional situations, including:
+                    </p>
+                    <ul>
+                        <li><strong>Ferry Cancellations:</strong> If the Sena Ferry is cancelled or suspended due to weather or mechanical issues.</li>
+                        <li><strong>Severe Weather:</strong> Documented severe weather preventing safe travel to the island.</li>
+                        <li><strong>Medical Emergencies:</strong> Documented medical emergencies preventing travel (physician's note required).</li>
+                        <li><strong>Government Restrictions:</strong> Official travel restrictions or border closures.</li>
+                    </ul>
+                    <p>
+                        In these cases, we will work directly with you to reschedule your stay to a future
+                        date without penalty, or provide a full refund if rescheduling is not possible.
+                    </p>
+                </section>
+
+                <!-- Section 7: Refunds -->
+                <section class="legal-section reveal" id="refunds">
+                    <div class="section-header">
+                        <span class="section-number">07</span>
+                        <h3 class="section-title">Refund Processing</h3>
+                    </div>
+                    <p>
+                        Approved refunds are processed back to your original payment method. Since we accept
+                        M-Pesa, bank transfer, and mobile money, refunds are handled as follows:
+                    </p>
+                    <ul>
+                        <li><strong>M-Pesa / Mobile Money:</strong> Processed within 3 to 5 business days.</li>
+                        <li><strong>Bank Transfer:</strong> Processed within 7 to 14 business days, depending on your bank's processing times.</li>
+                    </ul>
+                    <p>
+                        You will receive a confirmation message or email once the refund has been initiated
+                        by our management team.
+                    </p>
+                </section>
+
+                <!-- Section 8: Contact -->
+                <section class="legal-section reveal" id="contact-cancel">
+                    <div class="section-header">
+                        <span class="section-number">08</span>
+                        <h3 class="section-title">Contact Us</h3>
+                    </div>
+                    <p>
+                        For any questions regarding this policy, or to cancel or modify your reservation,
+                        please contact our management team directly:
+                    </p>
+
+                    <div class="contact-card">
+                        <h4>Get in Touch</h4>
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <span class="material-icons">phone</span>
+                                <div class="label">Primary Line</div>
+                                <div class="value"><a href="tel:+254756585016">+254 756 585 016</a></div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="material-icons">phone</span>
+                                <div class="label">Alternative Line</div>
+                                <div class="value"><a href="tel:+254715249204">+254 715 249 204</a></div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="material-icons">mail</span>
+                                <div class="label">Email</div>
+                                <div class="value"><a href="mailto:paulnyumbwe@gmail.com">paulnyumbwe@gmail.com</a></div>
+                            </div>
+                        </div>
+                        <p class="contact-address">
+                            <strong>Kadongo Cool Breez Hotel Resort</strong><br>
+                            P.O. Box 22–40319, Mfangano Island, Homa Bay County, Kenya
+                        </p>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+
+        <!-- Print Actions -->
+        <div class="print-actions">
+            <button class="print-btn" onclick="window.print()" aria-label="Print or save as PDF">
+                <span class="material-icons">print</span>
+                <span class="tooltip">Print / Save PDF</span>
+            </button>
+            <button class="print-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+                <span class="material-icons">keyboard_arrow_up</span>
+                <span class="tooltip">Back to Top</span>
+            </button>
+        </div>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container" style="position: relative; z-index: 1;">
+                <h2 class="cta-title">Questions About <em>Our Policy?</em></h2>
+                <p class="cta-text">Our team is here to help. Whether you need to modify a reservation or simply have a question, reach out and we'll assist you with care.</p>
+                <div class="cta-actions">
+                    <a href="booking.html" class="btn-primary"><span>Book Your Stay</span></a>
+                    <a href="tel:+254756585016" class="btn-secondary"><span>Call Us Now</span></a>
+                </div>
+                <div class="cta-contact">
+                    <div class="cta-contact-item">
+                        <span>📞</span>
+                        <span>+254 756 585 016</span>
+                    </div>
+                    <div class="cta-contact-item">
+                        <span>✉️</span>
+                        <span>paulnyumbwe@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="images/kadongologo.png" alt="Kadongo Cool Breez Hotel Resort" class="footer-logo-image">
+                        <p>Where Comfort Meets the Cool Breeze of Lake Victoria. A peaceful lakeside retreat on Mfangano Island offering authentic Kenyan hospitality, comfortable accommodation, and unforgettable natural beauty.</p>
+                        <div class="footer-social">
+                            <a href="https://web.facebook.com/profile.php?id=100007425518311" target="_blank" rel="noopener noreferrer" class="social-link social-link--facebook" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="https://wa.me/254756585016" target="_blank" rel="noopener noreferrer" class="social-link social-link--whatsapp" aria-label="WhatsApp">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=m8NyBI3VGc0" target="_blank" rel="noopener noreferrer" class="social-link social-link--youtube" aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="rooms.html">Rooms &amp; Suites</a></li>
+                            <li><a href="dining.html">Dining</a></li>
+                            <li><a href="amenities.html">Amenities</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Information</h4>
+                        <ul class="footer-links">
+                            <li><a href="location.html">Location</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="offers.html">Special Offers</a></li>
+                            <li><a href="cancellation.html">Cancellation Policy</a></li>
+                            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Contact</h4>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>P.O. Box 22–40319<br>Mfangano Island<br>Homa Bay County, Kenya</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+254 756 585 016<br>+254 715 249 204</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span>paulnyumbwe@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div>&copy; <span id="footer-year"></span> Kadongo Cool Breez Hotel Resort. All rights reserved.</div>
+                    <div>Mfangano Island, Kenya</div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Cookie Consent -->
+        <div class="cookie-consent" id="cookieConsent">
+            <div class="cookie-consent-text">
+                We use cookies to enhance your experience and analyse site traffic. By continuing to use our site, you consent to our use of cookies.
+                <a href="cookies.html">Learn more in our Cookie Policy</a>.
+            </div>
+            <div class="cookie-consent-actions">
+                <button class="cookie-btn cookie-btn-reject" onclick="Kadongo.rejectCookies()">Reject</button>
+                <button class="cookie-btn cookie-btn-learn" onclick="window.location.href='cookies.html'">Learn More</button>
+                <button class="cookie-btn cookie-btn-accept" onclick="Kadongo.acceptCookies()">Accept All</button>
+            </div>
+        </div>
+
+    </div><!-- /page-content -->
+
+    <script src="scripts/core.js"></script>
+</body>
+</html>
